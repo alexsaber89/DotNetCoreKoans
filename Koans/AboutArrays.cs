@@ -80,10 +80,10 @@ namespace DotNetCoreKoans.Koans
             var array = new[] { 1, 2 };
             var stack = new Stack(array);
             stack.Push("last");
-            // Assert.Equal(FILL_ME_IN, stack.ToArray()); REVISIT
+            Assert.Equal(new Object[] {"last", 2, 1}, stack.ToArray());
             var poppedValue = stack.Pop();
             Assert.Equal("last", poppedValue);
-            // Assert.Equal(FILL_ME_IN, stack.ToArray()); REVISIT
+            Assert.Equal(new Object[] { 2, 1 }, stack.ToArray());
         }
 
         [Step(6)]
@@ -96,16 +96,16 @@ namespace DotNetCoreKoans.Koans
             var array = new[] { "Hello", "World" };
             var list = new LinkedList<string>(array);
             list.AddFirst("Say");
-            // Assert.Equal(FILL_ME_IN, list.ToArray()); REVISIT
+            Assert.Equal(new string[] {"Say", "Hello", "World"}, list.ToArray());
 
             list.RemoveLast();
-            // Assert.Equal(FILL_ME_IN, list.ToArray()); REVISIT
+            Assert.Equal(new string[] {"Say", "Hello"}, list.ToArray());
 
             list.RemoveFirst();
-            // Assert.Equal(FILL_ME_IN, list.ToArray()); REVISIT
+            Assert.Equal(new string[] {"Hello"}, list.ToArray());
 
             list.AddAfter(list.Find("Hello"), "World");
-            // Assert.Equal(FILL_ME_IN, list.ToArray()); REVISIT
+            Assert.Equal(new string[] {"Hello", "World"}, list.ToArray());
         }
 
     }

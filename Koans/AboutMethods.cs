@@ -52,7 +52,7 @@ namespace DotNetCoreKoans.Koans
         [Step(3)]
         public void ExtensionMethodsWithVariableParameters()
         {
-            // Assert.Equal(FILL_ME_IN, this.MethodWithVariableArguments("Cory", "Will", "Corey")); REVISIT
+            Assert.Equal(new string[] {"Cory", "Will", "Corey"}, this.MethodWithVariableArguments("Cory", "Will", "Corey"));
         }
 
         //Extension methods can extend any class my referencing 
@@ -76,7 +76,7 @@ namespace DotNetCoreKoans.Koans
         [Step(5)]
         public void LocalMethodsWithVariableParams()
         {
-            // Assert.Equal(FILL_ME_IN, this.LocalMethodWithVariableParameters("Cory", "Will", "Corey")); REVISIT
+            Assert.Equal(new string[] {"Cory", "Will", "Corey"}, this.LocalMethodWithVariableParameters("Cory", "Will", "Corey"));
         }
 
         //Note how we called the method by saying "this.LocalMethodWithVariableParameters"
@@ -85,7 +85,7 @@ namespace DotNetCoreKoans.Koans
         [Step(6)]
         public void LocalMethodsWithoutExplicitReceiver()
         {
-            // Assert.Equal(FILL_ME_IN, LocalMethodWithVariableParameters("Cory", "Will", "Corey")); REVISIT
+            Assert.Equal(new string[] {"Cory", "Will", "Corey"}, LocalMethodWithVariableParameters("Cory", "Will", "Corey"));
         }
 
         //But it is required for Extension Methods, since it needs

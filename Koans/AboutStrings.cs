@@ -267,7 +267,7 @@ broken line";
         public void YouCanGetASingleCharacterFromAString()
         {
             var str = "Bacon, lettuce and tomato";
-            // Assert.Equal("B", str[0]); REVISIT
+            Assert.Equal('B', str[0]);
         }
 
         [Step(30)]
